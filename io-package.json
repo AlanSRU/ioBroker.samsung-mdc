@@ -1,7 +1,7 @@
 {
     "common": {
         "name": "samsung-mdc",
-        "version": "0.0.1",
+        "version": "0.1.0",
         "news": {
             "0.1.0": {
                 "en": "First public release: any number of displays per instance, discovery by address range, Wake-on-LAN\nA display is reported unreachable only after two failed polls in a row, and not while it restarts after a power-on\nSwitched-off display rows keep their objects",

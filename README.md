@@ -119,7 +119,7 @@ endorsed by Samsung.
     Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.1.0 (2026-09-25)
 * (Alan Paris) First public release: any number of displays per instance, discovery by address range, Wake-on-LAN
 * (Alan Paris) A display is reported unreachable only after two failed polls in a row, and not while it restarts after a power-on
 * (Alan Paris) Switched-off display rows keep their objects

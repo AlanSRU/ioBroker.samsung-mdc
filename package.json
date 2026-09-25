@@ -1,6 +1,6 @@
 {
   "name": "iobroker.samsung-mdc",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Control Samsung commercial signage displays via the MDC protocol (TCP 1515): power, input source, volume and status.",
   "author": {
     "name": "Alan Paris",

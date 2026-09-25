@@ -169,9 +169,9 @@ class SamsungMdc extends utils.Adapter {
     await this.extendObject(`${panel.id}.info.connection`, {
       type: "state",
       common: {
-        name: "Display connected",
+        name: "Display reachable",
         type: "boolean",
-        role: "indicator.connected",
+        role: "indicator.reachable",
         read: true,
         write: false,
         def: false
@@ -230,14 +230,17 @@ class SamsungMdc extends utils.Adapter {
       if (this.stopped) {
         return;
       }
-      await this.setState(`${panel.id}.control.power`, { val: s.power, ack: true });
+      const booting = !s.power && Date.now() < panel.graceUntil;
+      if (!booting) {
+        panel.graceUntil = 0;
+        await this.setState(`${panel.id}.control.power`, { val: s.power, ack: true });
+      }
       await this.setState(`${panel.id}.control.input`, { val: s.input, ack: true });
       await this.setState(`${panel.id}.media.volume`, { val: s.volume, ack: true });
       if (s.power) {
         await this.setState(`${panel.id}.media.mute`, { val: s.mute, ack: true });
       }
       panel.failures = 0;
-      panel.graceUntil = 0;
       await this.setConnected(panel, true);
     } catch (error) {
       const message = error.message;
@@ -323,6 +326,7 @@ class SamsungMdc extends utils.Adapter {
    */
   async setPower(panel, on) {
     if (!on) {
+      panel.graceUntil = 0;
       await panel.client.setPower(false);
       return;
     }

@@ -12,7 +12,15 @@ function startFakePanel(port, state) {
         socket.on('data', request => {
             const command = request[1];
             const data = request.subarray(4, 4 + request[3]);
-            if (command === 0x11) state.power = data[0] === 1;
+            if (command === 0x11) {
+                // like a real panel, keep reporting "off" for a while after POWER ON
+                state.bootedAt = data[0] === 1 ? Date.now() + (state.bootMs || 0) : undefined;
+                state.power = data[0] === 1 && !state.bootMs;
+            }
+            if (state.bootedAt && Date.now() >= state.bootedAt) {
+                state.power = true;
+                state.bootedAt = undefined;
+            }
             if (command === 0x12) state.volume = data[0];
             if (command === 0x13) state.mute = data[0] === 1;
             if (command === 0x14) state.input = data[0];
@@ -70,7 +78,7 @@ tests.integration(path.join(__dirname, '..'), {
     defineAdditionalTests({ suite }) {
         suite('multiple displays', getHarness => {
             const west = { power: true, volume: 42, mute: false, input: 0x21 };
-            const tunnel = { power: false, volume: 7, mute: true, input: 0x23 };
+            const tunnel = { power: false, volume: 7, mute: true, input: 0x23, bootMs: 3000 };
             const panels = [];
 
             before(async function () {
@@ -126,6 +134,17 @@ tests.integration(path.join(__dirname, '..'), {
                 await waitForState(harness, 'samsung-mdc.0.tunnel.media.volume', s => s.val === 15 && s.ack === true);
                 expect(tunnel.volume).to.equal(15);
                 expect(west.volume).to.equal(42);
+            });
+
+            it('does not flip power back to off while a display boots after power-on', async function () {
+                this.timeout(30000);
+                const harness = getHarness();
+                await setState(harness, 'samsung-mdc.0.tunnel.control.power', true);
+                await waitForState(harness, 'samsung-mdc.0.tunnel.control.power', s => s.val === true && s.ack);
+                // the read-back 600 ms after the command still sees power=0
+                await new Promise(resolve => setTimeout(resolve, 1500));
+                expect((await getState(harness, 'samsung-mdc.0.tunnel.control.power')).val).to.equal(true);
+                expect((await getState(harness, 'samsung-mdc.0.tunnel.info.connection')).val).to.equal(true);
             });
 
             it('routes sendTo commands by display', async function () {

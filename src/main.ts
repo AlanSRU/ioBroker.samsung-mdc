@@ -226,9 +226,9 @@ class SamsungMdc extends utils.Adapter {
         await this.extendObject(`${panel.id}.info.connection`, {
             type: 'state',
             common: {
-                name: 'Display connected',
+                name: 'Display reachable',
                 type: 'boolean',
-                role: 'indicator.connected',
+                role: 'indicator.reachable',
                 read: true,
                 write: false,
                 def: false,
@@ -288,7 +288,13 @@ class SamsungMdc extends utils.Adapter {
             if (this.stopped) {
                 return;
             }
-            await this.setState(`${panel.id}.control.power`, { val: s.power, ack: true });
+            // right after a power-on the panel still reports power=0 for a few seconds;
+            // keep the grace window and the requested value until it reports on
+            const booting = !s.power && Date.now() < panel.graceUntil;
+            if (!booting) {
+                panel.graceUntil = 0;
+                await this.setState(`${panel.id}.control.power`, { val: s.power, ack: true });
+            }
             await this.setState(`${panel.id}.control.input`, { val: s.input, ack: true });
             await this.setState(`${panel.id}.media.volume`, { val: s.volume, ack: true });
             if (s.power) {
@@ -296,7 +302,6 @@ class SamsungMdc extends utils.Adapter {
                 await this.setState(`${panel.id}.media.mute`, { val: s.mute, ack: true });
             }
             panel.failures = 0;
-            panel.graceUntil = 0;
             await this.setConnected(panel, true);
         } catch (error) {
             const message = (error as Error).message;
@@ -389,6 +394,7 @@ class SamsungMdc extends utils.Adapter {
      */
     private async setPower(panel: Panel, on: boolean): Promise<void> {
         if (!on) {
+            panel.graceUntil = 0;
             await panel.client.setPower(false);
             return;
         }

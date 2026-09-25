@@ -57,7 +57,7 @@
             "zh-cn": "通过 MDC 协议 (TCP 1515) 控制三星商业标牌显示器：电源、输入源、音量和状态。"
         },
         "authors": ["Alan Paris <alan.paris@scottish.rugby>"],
-        "keywords": ["ioBroker", "samsung", "mdc", "signage", "display", "commercial"],
+        "keywords": ["samsung", "mdc", "signage", "display", "commercial"],
         "licenseInformation": {
             "type": "free",
             "license": "MIT"

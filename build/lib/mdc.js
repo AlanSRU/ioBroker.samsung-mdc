@@ -74,6 +74,7 @@ class MdcClient {
       };
       socket.setTimeout(this.timeoutMs, () => finish(new Error(`MDC timeout after ${this.timeoutMs} ms`)));
       socket.on("error", (err) => finish(err));
+      socket.on("close", () => finish(new Error("MDC connection closed before a complete reply")));
       socket.on("data", (chunk) => {
         chunks.push(chunk);
         const buf = Buffer.concat(chunks);

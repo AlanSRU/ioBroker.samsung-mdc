@@ -42,10 +42,6 @@ for (let i = 0; i < argv.length; i++) {
     }
 }
 const [ip, command = 'read', ...rest] = pos;
-if (!ip) {
-    console.error('Usage: node test-mdc.js <ip> [command] [args]  (see header for commands)');
-    process.exit(1);
-}
 
 const hex = buf => Array.from(buf, b => b.toString(16).padStart(2, '0')).join(' ');
 
@@ -153,6 +149,11 @@ function wake(mac) {
 }
 
 (async () => {
+    if (!ip) {
+        console.error('Usage: node test-mdc.js <ip> [command] [args]  (see header for commands)');
+        process.exitCode = 1;
+        return;
+    }
     try {
         switch (command) {
             case 'read':
@@ -193,13 +194,13 @@ function wake(mac) {
                 break;
             default:
                 console.error(`unknown command "${command}"`);
-                process.exit(1);
+                process.exitCode = 1;
         }
     } catch (e) {
         console.error(`\n✗ ${e.message}`);
         console.error(
             '  Checks: panel powered/network-standby on, on the LAN, port 1515 open, MDC/network control enabled, correct Set ID (try: discover).',
         );
-        process.exit(1);
+        process.exitCode = 1;
     }
 })();

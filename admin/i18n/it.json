@@ -1,0 +1,21 @@
+{
+    "Active": "Attivo",
+    "Address range to search": "Intervallo di indirizzi da cercare",
+    "Default volume on power on": "Volume predefinito all'accensione",
+    "Display ID": "ID display",
+    "Displays": "Display",
+    "How often each display is polled, 5 to 3600 seconds; 0 disables polling": "La frequenza con cui viene eseguito il polling di ciascun display, da 5 a 3600 secondi; 0 disabilita il polling",
+    "IP address": "Indirizzo IP",
+    "MAC address": "Indirizzo MAC",
+    "MDC panels cannot be discovered passively — the adapter probes every address for an MDC answer on port 1515 with set ID 0. Save any pending changes first: found panels are merged into the saved list. Accepts 192.168.230.0/24, 192.168.230.10-60, 192.168.230.10-192.168.231.20 or single addresses, comma separated.": "I pannelli MDC non possono essere rilevati passivamente: l'adattatore sonda ogni indirizzo per una risposta MDC sulla porta 1515 con ID impostato 0. Salvare prima eventuali modifiche in sospeso: i pannelli trovati vengono uniti nell'elenco salvato. Accetta 192.168.230.0/24, 192.168.230.10-60, 192.168.230.10-192.168.231.20 o indirizzi singoli separati da virgole.",
+    "Name": "Nome",
+    "One row per display. The name becomes the object-tree folder (samsung-mdc.0.<name>.control.power); leave it empty to use the IP address. Display ID is the MDC set ID — 0 for a panel on its own address.": "Una riga per display. Il nome diventa la cartella dell'albero degli oggetti (samsung-mdc.0.<nome>.control.power); lasciarlo vuoto per utilizzare l'indirizzo IP. L'ID display è l'ID impostato MDC: 0 per un pannello con il proprio indirizzo.",
+    "Only needed to wake a fully powered-off panel; not required when Network Standby is on. Sends to the MAC address of the display and only works from a host on the display's own network segment": "Necessario solo per riattivare un pannello completamente spento; non richiesto quando Network Standby è attivo. Invia all'indirizzo MAC del display e funziona solo da un host sul segmento di rete proprio del display",
+    "Optional volume (0-100) applied when a display is powered on; leave empty to disable": "Volume opzionale (0-100) applicato quando il display è acceso; lasciare vuoto per disabilitare",
+    "Options": "Opzioni",
+    "Polling interval (s)": "Intervallo di polling (s)",
+    "Port": "Porta",
+    "Search": "Cerca",
+    "Search for displays": "Cerca display",
+    "Use Wake-on-LAN for power on": "Utilizzare Wake-on-LAN per l'accensione"
+}

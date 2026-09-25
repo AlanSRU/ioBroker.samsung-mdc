@@ -1,0 +1,175 @@
+{
+    "i18n": true,
+    "type": "tabs",
+    "items": {
+        "displaysTab": {
+            "type": "panel",
+            "label": "Displays",
+            "items": {
+                "devicesHint": {
+                    "type": "staticText",
+                    "text": "One row per display. The name becomes the object-tree folder (samsung-mdc.0.<name>.control.power); leave it empty to use the IP address. Display ID is the MDC set ID — 0 for a panel on its own address.",
+                    "newLine": true,
+                    "xs": 12,
+                    "sm": 12,
+                    "md": 12,
+                    "lg": 12,
+                    "xl": 12
+                },
+                "devices": {
+                    "type": "table",
+                    "label": "Displays",
+                    "newLine": true,
+                    "xs": 12,
+                    "sm": 12,
+                    "md": 12,
+                    "lg": 12,
+                    "xl": 12,
+                    "clone": true,
+                    "export": true,
+                    "import": true,
+                    "items": [
+                        {
+                            "type": "checkbox",
+                            "attr": "enabled",
+                            "title": "Active",
+                            "width": "8%",
+                            "default": true
+                        },
+                        {
+                            "type": "text",
+                            "attr": "name",
+                            "title": "Name",
+                            "width": "28%",
+                            "default": "",
+                            "sort": true
+                        },
+                        {
+                            "type": "text",
+                            "attr": "ipAddress",
+                            "title": "IP address",
+                            "width": "24%",
+                            "default": ""
+                        },
+                        {
+                            "type": "number",
+                            "attr": "port",
+                            "title": "Port",
+                            "width": "10%",
+                            "min": 1,
+                            "max": 65535,
+                            "default": 1515
+                        },
+                        {
+                            "type": "number",
+                            "attr": "displayId",
+                            "title": "Display ID",
+                            "width": "10%",
+                            "min": 0,
+                            "max": 255,
+                            "default": 0
+                        },
+                        {
+                            "type": "text",
+                            "attr": "macAddress",
+                            "title": "MAC address",
+                            "width": "20%",
+                            "default": ""
+                        }
+                    ]
+                },
+                "scanHeader": {
+                    "type": "header",
+                    "text": "Search for displays",
+                    "size": 2,
+                    "newLine": true,
+                    "xs": 12,
+                    "sm": 12,
+                    "md": 12,
+                    "lg": 12,
+                    "xl": 12
+                },
+                "scanHint": {
+                    "type": "staticText",
+                    "text": "MDC panels cannot be discovered passively — the adapter probes every address for an MDC answer on port 1515 with set ID 0. Save any pending changes first: found panels are merged into the saved list. Accepts 192.168.230.0/24, 192.168.230.10-60, 192.168.230.10-192.168.231.20 or single addresses, comma separated.",
+                    "newLine": true,
+                    "xs": 12,
+                    "sm": 12,
+                    "md": 12,
+                    "lg": 12,
+                    "xl": 12
+                },
+                "scanRange": {
+                    "type": "text",
+                    "label": "Address range to search",
+                    "placeholder": "192.168.230.0/24",
+                    "newLine": true,
+                    "xs": 12,
+                    "sm": 12,
+                    "md": 8,
+                    "lg": 6,
+                    "xl": 6
+                },
+                "scanButton": {
+                    "type": "sendTo",
+                    "label": "Search",
+                    "command": "discover",
+                    "jsonData": "{\"range\": \"${data.scanRange}\"}",
+                    "icon": "search",
+                    "variant": "contained",
+                    "useNative": true,
+                    "showProcess": true,
+                    "timeout": 300000,
+                    "disabled": "!data.scanRange",
+                    "xs": 12,
+                    "sm": 12,
+                    "md": 4,
+                    "lg": 3,
+                    "xl": 3
+                }
+            }
+        },
+        "optionsTab": {
+            "type": "panel",
+            "label": "Options",
+            "items": {
+                "pollingInterval": {
+                    "type": "number",
+                    "label": "Polling interval (s)",
+                    "min": 0,
+                    "default": 30,
+                    "help": "How often each display is polled, 5 to 3600 seconds; 0 disables polling",
+                    "newLine": true,
+                    "xs": 12,
+                    "sm": 12,
+                    "md": 4,
+                    "lg": 3,
+                    "xl": 3,
+                    "max": 3600
+                },
+                "defaultVolume": {
+                    "type": "text",
+                    "label": "Default volume on power on",
+                    "help": "Optional volume (0-100) applied when a display is powered on; leave empty to disable",
+                    "newLine": true,
+                    "xs": 12,
+                    "sm": 12,
+                    "md": 6,
+                    "lg": 4,
+                    "xl": 4
+                },
+                "useWol": {
+                    "type": "checkbox",
+                    "label": "Use Wake-on-LAN for power on",
+                    "help": "Only needed to wake a fully powered-off panel; not required when Network Standby is on. Sends to the MAC address of the display and only works from a host on the display's own network segment",
+                    "newLine": true,
+                    "xs": 12,
+                    "sm": 12,
+                    "md": 6,
+                    "lg": 4,
+                    "xl": 4
+                }
+            }
+        }
+    }
+}

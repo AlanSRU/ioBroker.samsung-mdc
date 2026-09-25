@@ -1,0 +1,21 @@
+{
+    "Active": "Actief",
+    "Address range to search": "Adresbereik om te zoeken",
+    "Default volume on power on": "Standaardvolume bij inschakelen",
+    "Display ID": "Scherm-ID",
+    "Displays": "Beeldschermen",
+    "How often each display is polled, 5 to 3600 seconds; 0 disables polling": "Hoe vaak elk scherm wordt opgevraagd, 5 tot 3600 seconden; 0 schakelt polling uit",
+    "IP address": "IP-adres",
+    "MAC address": "MAC-adres",
+    "MDC panels cannot be discovered passively — the adapter probes every address for an MDC answer on port 1515 with set ID 0. Save any pending changes first: found panels are merged into the saved list. Accepts 192.168.230.0/24, 192.168.230.10-60, 192.168.230.10-192.168.231.20 or single addresses, comma separated.": "MDC-panelen kunnen niet passief worden ontdekt: de adapter zoekt bij elk adres naar een MDC-antwoord op poort 1515 met de ingestelde ID 0. Sla eventuele wijzigingen eerst op: gevonden panelen worden samengevoegd in de opgeslagen lijst. Accepteert 192.168.230.0/24, 192.168.230.10-60, 192.168.230.10-192.168.231.20 of afzonderlijke adressen, door komma's gescheiden.",
+    "Name": "Naam",
+    "One row per display. The name becomes the object-tree folder (samsung-mdc.0.<name>.control.power); leave it empty to use the IP address. Display ID is the MDC set ID — 0 for a panel on its own address.": "Eén rij per display. De naam wordt de objectboommap (samsung-mdc.0.<naam>.control.power); laat het leeg om het IP-adres te gebruiken. Weergave-ID is de MDC-set-ID — 0 voor een paneel op zijn eigen adres.",
+    "Only needed to wake a fully powered-off panel; not required when Network Standby is on. Sends to the MAC address of the display and only works from a host on the display's own network segment": "Alleen nodig om een volledig uitgeschakeld paneel te wekken; niet vereist wanneer Netwerk Stand-by is ingeschakeld. Verzendt naar het MAC-adres van het beeldscherm en werkt alleen vanaf een host op het eigen netwerksegment van het beeldscherm",
+    "Optional volume (0-100) applied when a display is powered on; leave empty to disable": "Optioneel volume (0-100) toegepast wanneer een beeldscherm wordt ingeschakeld; laat leeg om uit te schakelen",
+    "Options": "Opties",
+    "Polling interval (s)": "Polling-interval (s)",
+    "Port": "Poort",
+    "Search": "Zoeken",
+    "Search for displays": "Zoek naar beeldschermen",
+    "Use Wake-on-LAN for power on": "Gebruik Wake-on-LAN om in te schakelen"
+}

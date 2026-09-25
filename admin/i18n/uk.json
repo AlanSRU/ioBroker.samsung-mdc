@@ -1,0 +1,21 @@
+{
+    "Active": "Активний",
+    "Address range to search": "Діапазон адрес для пошуку",
+    "Default volume on power on": "Гучність за замовчуванням під час увімкнення",
+    "Display ID": "Ідентифікатор дисплея",
+    "Displays": "Дисплеї",
+    "How often each display is polled, 5 to 3600 seconds; 0 disables polling": "Як часто опитується кожен дисплей, від 5 до 3600 секунд; 0 вимикає опитування",
+    "IP address": "IP адреса",
+    "MAC address": "MAC-адреса",
+    "MDC panels cannot be discovered passively — the adapter probes every address for an MDC answer on port 1515 with set ID 0. Save any pending changes first: found panels are merged into the saved list. Accepts 192.168.230.0/24, 192.168.230.10-60, 192.168.230.10-192.168.231.20 or single addresses, comma separated.": "Панелі MDC не можна виявити пасивно — адаптер перевіряє кожну адресу на пошук відповіді MDC на порту 1515 із встановленим ідентифікатором 0. Спочатку збережіть будь-які незавершені зміни: знайдені панелі об’єднуються в збережений список. Приймає 192.168.230.0/24, 192.168.230.10-60, 192.168.230.10-192.168.231.20 або окремі адреси, розділені комами.",
+    "Name": "Назва",
+    "One row per display. The name becomes the object-tree folder (samsung-mdc.0.<name>.control.power); leave it empty to use the IP address. Display ID is the MDC set ID — 0 for a panel on its own address.": "Один рядок на дисплей. Ім’я стає папкою дерева об’єктів (samsung-mdc.0.<ім’я>.control.power); залиште поле порожнім, щоб використовувати IP-адресу. Ідентифікатор відображення — це ідентифікатор набору MDC — 0 для панелі за власною адресою.",
+    "Only needed to wake a fully powered-off panel; not required when Network Standby is on. Sends to the MAC address of the display and only works from a host on the display's own network segment": "Потрібно лише для пробудження повністю вимкненої панелі; не потрібний, коли ввімкнено режим очікування мережі. Sends to the MAC address of the display and only works from a host on the display's own network segment",
+    "Optional volume (0-100) applied when a display is powered on; leave empty to disable": "Додаткова гучність (0-100), що застосовується, коли дисплей увімкнено; залиште порожнім, щоб вимкнути",
+    "Options": "Параметри",
+    "Polling interval (s)": "Інтервал опитування (с)",
+    "Port": "Порт",
+    "Search": "Пошук",
+    "Search for displays": "Пошук дисплеїв",
+    "Use Wake-on-LAN for power on": "Використовуйте Wake-on-LAN для ввімкнення"
+}

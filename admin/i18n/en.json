@@ -1,0 +1,21 @@
+{
+    "Displays": "Displays",
+    "One row per display. The name becomes the object-tree folder (samsung-mdc.0.<name>.control.power); leave it empty to use the IP address. Display ID is the MDC set ID — 0 for a panel on its own address.": "One row per display. The name becomes the object-tree folder (samsung-mdc.0.<name>.control.power); leave it empty to use the IP address. Display ID is the MDC set ID — 0 for a panel on its own address.",
+    "Active": "Active",
+    "Name": "Name",
+    "IP address": "IP address",
+    "Port": "Port",
+    "Display ID": "Display ID",
+    "MAC address": "MAC address",
+    "Search for displays": "Search for displays",
+    "MDC panels cannot be discovered passively — the adapter probes every address for an MDC answer on port 1515 with set ID 0. Save any pending changes first: found panels are merged into the saved list. Accepts 192.168.230.0/24, 192.168.230.10-60, 192.168.230.10-192.168.231.20 or single addresses, comma separated.": "MDC panels cannot be discovered passively — the adapter probes every address for an MDC answer on port 1515 with set ID 0. Save any pending changes first: found panels are merged into the saved list. Accepts 192.168.230.0/24, 192.168.230.10-60, 192.168.230.10-192.168.231.20 or single addresses, comma separated.",
+    "Address range to search": "Address range to search",
+    "Search": "Search",
+    "Options": "Options",
+    "Polling interval (s)": "Polling interval (s)",
+    "Default volume on power on": "Default volume on power on",
+    "Optional volume (0-100) applied when a display is powered on; leave empty to disable": "Optional volume (0-100) applied when a display is powered on; leave empty to disable",
+    "Use Wake-on-LAN for power on": "Use Wake-on-LAN for power on",
+    "Only needed to wake a fully powered-off panel; not required when Network Standby is on. Sends to the MAC address of the display and only works from a host on the display's own network segment": "Only needed to wake a fully powered-off panel; not required when Network Standby is on. Sends to the MAC address of the display and only works from a host on the display's own network segment",
+    "How often each display is polled, 5 to 3600 seconds; 0 disables polling": "How often each display is polled, 5 to 3600 seconds; 0 disables polling"
+}

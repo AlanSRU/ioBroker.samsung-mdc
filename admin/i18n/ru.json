@@ -1,0 +1,21 @@
+{
+    "Active": "Активный",
+    "Address range to search": "Диапазон адресов для поиска",
+    "Default volume on power on": "Громкость по умолчанию при включении питания",
+    "Display ID": "Идентификатор дисплея",
+    "Displays": "Дисплеи",
+    "How often each display is polled, 5 to 3600 seconds; 0 disables polling": "Частота опроса каждого дисплея: от 5 до 3600 секунд; 0 отключает опрос",
+    "IP address": "IP-адрес",
+    "MAC address": "MAC-адрес",
+    "MDC panels cannot be discovered passively — the adapter probes every address for an MDC answer on port 1515 with set ID 0. Save any pending changes first: found panels are merged into the saved list. Accepts 192.168.230.0/24, 192.168.230.10-60, 192.168.230.10-192.168.231.20 or single addresses, comma separated.": "Панели MDC не могут быть обнаружены пассивно — адаптер проверяет каждый адрес на наличие ответа MDC на порту 1515 с установленным идентификатором 0. Сначала сохраните все ожидающие изменения: найденные панели объединяются в сохраненный список. Принимает 192.168.230.0/24, 192.168.230.10-60, 192.168.230.10-192.168.231.20 или отдельные адреса, разделенные запятой.",
+    "Name": "Название",
+    "One row per display. The name becomes the object-tree folder (samsung-mdc.0.<name>.control.power); leave it empty to use the IP address. Display ID is the MDC set ID — 0 for a panel on its own address.": "Одна строка на дисплей. Имя становится папкой дерева объектов (samsung-mdc.0.<имя>.control.power); оставьте поле пустым, чтобы использовать IP-адрес. Идентификатор дисплея — это идентификатор набора MDC — 0 для панели по собственному адресу.",
+    "Only needed to wake a fully powered-off panel; not required when Network Standby is on. Sends to the MAC address of the display and only works from a host on the display's own network segment": "Требуется только для пробуждения полностью выключенной панели; не требуется, если включен режим ожидания сети. Отправляет на MAC-адрес дисплея и работает только с хоста в собственном сегменте сети дисплея.",
+    "Optional volume (0-100) applied when a display is powered on; leave empty to disable": "Дополнительная громкость (0–100), применяемая при включении дисплея; оставьте пустым, чтобы отключить",
+    "Options": "Параметры",
+    "Polling interval (s)": "Интервал опроса (с)",
+    "Port": "Порт",
+    "Search": "Поиск",
+    "Search for displays": "Поиск дисплеев",
+    "Use Wake-on-LAN for power on": "Используйте Wake-on-LAN для включения питания"
+}

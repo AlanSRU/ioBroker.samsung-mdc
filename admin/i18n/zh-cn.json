@@ -1,0 +1,21 @@
+{
+    "Active": "启用",
+    "Address range to search": "要搜索的地址范围",
+    "Default volume on power on": "开机默认音量",
+    "Display ID": "显示ID",
+    "Displays": "显示器",
+    "How often each display is polled, 5 to 3600 seconds; 0 disables polling": "每个显示器轮询的频率，5 到 3600 秒； 0 禁用轮询",
+    "IP address": "IP地址",
+    "MAC address": "MAC地址",
+    "MDC panels cannot be discovered passively — the adapter probes every address for an MDC answer on port 1515 with set ID 0. Save any pending changes first: found panels are merged into the saved list. Accepts 192.168.230.0/24, 192.168.230.10-60, 192.168.230.10-192.168.231.20 or single addresses, comma separated.": "无法被动发现 MDC 面板 — 适配器会在端口 1515 上探测每个地址，以获取设置 ID 0 的 MDC 应答。首先保存所有挂起的更改：找到的面板将合并到已保存的列表中。接受 192.168.230.0/24、192.168.230.10-60、192.168.230.10-192.168.231.20 或单个地址，以逗号分隔。",
+    "Name": "名称",
+    "One row per display. The name becomes the object-tree folder (samsung-mdc.0.<name>.control.power); leave it empty to use the IP address. Display ID is the MDC set ID — 0 for a panel on its own address.": "每个显示器一行。该名称成为对象树文件夹 (samsung-mdc.0.<name>.control.power)；将其留空以使用 IP 地址。显示 ID 是 MDC 设置 ID — 0 表示面板位于其自己的地址上。",
+    "Only needed to wake a fully powered-off panel; not required when Network Standby is on. Sends to the MAC address of the display and only works from a host on the display's own network segment": "只需要唤醒完全断电的面板即可；当网络待机打开时不需要。发送到显示器的 MAC 地址，并且只能在显示器自己的网段上的主机上工作",
+    "Optional volume (0-100) applied when a display is powered on; leave empty to disable": "显示器开机时应用可选音量（0-100）；留空以禁用",
+    "Options": "选项",
+    "Polling interval (s)": "轮询间隔（秒）",
+    "Port": "端口",
+    "Search": "搜索",
+    "Search for displays": "搜索显示器",
+    "Use Wake-on-LAN for power on": "使用 LAN 唤醒开机"
+}

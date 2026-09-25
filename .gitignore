@@ -1,0 +1,28 @@
+# No dot-directories except github/vscode
+.*/
+!.vscode/
+!.github/
+
+*.code-workspace
+node_modules
+nbproject
+
+# npm package files
+iobroker.*.tgz
+
+# local-only dev notes
+CLAUDE.md
+
+Thumbs.db
+.commitinfo
+
+# i18n intermediate files
+admin/i18n/flat.txt
+admin/i18n/*/flat.txt
+
+# Local pre-release review marker (iobroker-dev release gate) — never commit
+.review/
+
+# OS and tooling junk
+.DS_Store
+npm-debug.log*

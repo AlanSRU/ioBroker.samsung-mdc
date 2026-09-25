@@ -1,0 +1,126 @@
+{
+    "common": {
+        "name": "samsung-mdc",
+        "version": "0.0.1",
+        "news": {
+            "0.1.0": {
+                "en": "First public release: any number of displays per instance, discovery by address range, Wake-on-LAN\nA display is reported unreachable only after two failed polls in a row, and not while it restarts after a power-on\nSwitched-off display rows keep their objects",
+                "de": "Erste öffentliche Version: beliebig viele Displays pro Instanz, Suche über einen Adressbereich, Wake-on-LAN\nEin Display gilt erst nach zwei fehlgeschlagenen Abfragen in Folge als nicht erreichbar, und nicht während des Neustarts nach dem Einschalten\nAusgeschaltete Display-Zeilen behalten ihre Objekte",
+                "ru": "Первый публичный выпуск: любое количество дисплеев в одном экземпляре, поиск по диапазону адресов, Wake-on-LAN\nДисплей считается недоступным только после двух неудачных опросов подряд и не во время перезапуска после включения\nОтключённые строки дисплеев сохраняют свои объекты",
+                "pt": "Primeira versão pública: qualquer número de monitores por instância, pesquisa por intervalo de endereços, Wake-on-LAN\nUm monitor só é considerado inacessível após duas consultas falhadas seguidas, e não enquanto reinicia após ser ligado\nAs linhas de monitores desativadas mantêm os seus objetos",
+                "nl": "Eerste openbare versie: willekeurig veel schermen per instantie, zoeken op adresbereik, Wake-on-LAN\nEen scherm geldt pas als onbereikbaar na twee mislukte pollings op rij, en niet terwijl het na het inschakelen herstart\nUitgeschakelde schermregels behouden hun objecten",
+                "fr": "Première version publique : nombre illimité d’écrans par instance, recherche par plage d’adresses, Wake-on-LAN\nUn écran n’est signalé injoignable qu’après deux interrogations échouées de suite, et pas pendant son redémarrage après la mise sous tension\nLes lignes d’écran désactivées conservent leurs objets",
+                "it": "Prima versione pubblica: qualsiasi numero di display per istanza, ricerca per intervallo di indirizzi, Wake-on-LAN\nUn display è segnalato irraggiungibile solo dopo due interrogazioni fallite di seguito, e non mentre si riavvia dopo l’accensione\nLe righe dei display disattivate conservano i loro oggetti",
+                "es": "Primera versión pública: cualquier número de pantallas por instancia, búsqueda por rango de direcciones, Wake-on-LAN\nUna pantalla solo se considera inaccesible tras dos consultas fallidas seguidas, y no mientras se reinicia tras encenderse\nLas filas de pantallas desactivadas conservan sus objetos",
+                "pl": "Pierwsze publiczne wydanie: dowolna liczba wyświetlaczy na instancję, wyszukiwanie w zakresie adresów, Wake-on-LAN\nWyświetlacz jest zgłaszany jako nieosiągalny dopiero po dwóch nieudanych odpytaniach z rzędu, a nie podczas restartu po włączeniu\nWyłączone wiersze wyświetlaczy zachowują swoje obiekty",
+                "uk": "Перший публічний випуск: будь-яка кількість дисплеїв на екземпляр, пошук за діапазоном адрес, Wake-on-LAN\nДисплей вважається недоступним лише після двох невдалих опитувань поспіль і не під час перезапуску після ввімкнення\nВимкнені рядки дисплеїв зберігають свої об’єкти",
+                "zh-cn": "首个公开版本：每个实例可控制任意数量的显示器，按地址范围搜索，网络唤醒（Wake-on-LAN）\n显示器仅在连续两次轮询失败后才报告为不可达，开机后重启期间不会报告\n已停用的显示器行保留其对象"
+            },
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "uk": "Початкова версія",
+                "zh-cn": "首次出版"
+            }
+        },
+        "titleLang": {
+            "en": "Samsung MDC",
+            "de": "Samsung MDC",
+            "ru": "Samsung MDC",
+            "pt": "Samsung MDC",
+            "nl": "Samsung MDC",
+            "fr": "Samsung MDC",
+            "it": "Samsung MDC",
+            "es": "Samsung MDC",
+            "pl": "Samsung MDC",
+            "uk": "Samsung MDC",
+            "zh-cn": "三星 MDC"
+        },
+        "desc": {
+            "en": "Control Samsung commercial signage displays via the MDC protocol (TCP 1515): power, input source, volume and status.",
+            "de": "Steuern Sie die kommerziellen Signage-Displays von Samsung über das MDC-Protokoll (TCP 1515): Stromversorgung, Eingangsquelle, Lautstärke und Status.",
+            "ru": "Управляйте коммерческими вывесками Samsung через протокол MDC (TCP 1515): питание, источник входного сигнала, громкость и состояние.",
+            "pt": "Controle os displays de sinalização comercial da Samsung através do protocolo MDC (TCP 1515): alimentação, fonte de entrada, volume e status.",
+            "nl": "Bedien commerciële signage-displays van Samsung via het MDC-protocol (TCP 1515): stroom, ingangsbron, volume en status.",
+            "fr": "Contrôlez les écrans d'affichage commerciaux Samsung via le protocole MDC (TCP 1515) : alimentation, source d'entrée, volume et état.",
+            "it": "Controlla i display di segnaletica commerciale Samsung tramite il protocollo MDC (TCP 1515): alimentazione, sorgente di ingresso, volume e stato.",
+            "es": "Controle los displays de señalización comercial Samsung mediante el protocolo MDC (TCP 1515): alimentación, fuente de entrada, volumen y estado.",
+            "pl": "Kontroluj komercyjne wyświetlacze Signage firmy Samsung za pośrednictwem protokołu MDC (TCP 1515): zasilanie, źródło sygnału wejściowego, głośność i stan.",
+            "uk": "Контролюйте рекламні дисплеї Samsung за допомогою протоколу MDC (TCP 1515): живлення, джерело вхідного сигналу, гучність і стан.",
+            "zh-cn": "通过 MDC 协议 (TCP 1515) 控制三星商业标牌显示器：电源、输入源、音量和状态。"
+        },
+        "authors": ["Alan Paris <alan.paris@scottish.rugby>"],
+        "keywords": ["ioBroker", "samsung", "mdc", "signage", "display", "commercial"],
+        "licenseInformation": {
+            "type": "free",
+            "license": "MIT"
+        },
+        "platform": "Javascript/Node.js",
+        "icon": "samsung-mdc.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/AlanSRU/ioBroker.samsung-mdc/main/admin/samsung-mdc.png",
+        "readme": "https://github.com/AlanSRU/ioBroker.samsung-mdc/blob/main/README.md",
+        "loglevel": "info",
+        "tier": 3,
+        "mode": "daemon",
+        "type": "multimedia",
+        "compact": true,
+        "messagebox": true,
+        "supportedMessages": {
+            "custom": true
+        },
+        "connectionType": "local",
+        "dataSource": "poll",
+        "adminUI": {
+            "config": "json"
+        },
+        "dependencies": [
+            {
+                "js-controller": ">=6.0.11"
+            }
+        ],
+        "globalDependencies": [
+            {
+                "admin": ">=7.6.20"
+            }
+        ]
+    },
+    "native": {
+        "devices": [],
+        "pollingInterval": 30,
+        "defaultVolume": "",
+        "useWol": false,
+        "scanRange": ""
+    },
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Device or service connected",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        }
+    ]
+}

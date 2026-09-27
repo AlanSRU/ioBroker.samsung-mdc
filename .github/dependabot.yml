@@ -1,0 +1,26 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: monthly
+      time: "04:00"
+      timezone: Europe/London
+    open-pull-requests-limit: 5
+    assignees:
+      - AlanSRU
+    versioning-strategy: increase
+    cooldown:
+      default-days: 7
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: monthly
+      time: "04:00"
+      timezone: Europe/London
+    open-pull-requests-limit: 5
+    assignees:
+      - AlanSRU
+    cooldown:
+      default-days: 7

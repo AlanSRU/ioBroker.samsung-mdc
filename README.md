@@ -127,6 +127,8 @@ endorsed by Samsung.
 ### 0.0.1 (2026-09-25)
 * (Alan Paris) initial release
 
+Older changes can be found in [CHANGELOG_OLD.md](CHANGELOG_OLD.md)
+
 ## License
 MIT License
 
